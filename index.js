@@ -24,7 +24,8 @@ io.sockets.on("connection", socket => {
   });
 });
 
-const server = http.listen(5000, () => {
+const PORT = process.env.PORT || 5000;
+const server = http.listen(PORT, () => {
   console.log("listening on 5000");
 });
 // listen using http or express are the same, under the hood, express are using http to listen,
